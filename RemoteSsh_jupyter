@@ -1,3 +1,7 @@
 jupyter notebook --no-browser --port 1234
 http://localhost:8888/?token=8d186032bbbe095b294789e863b065a546fcc15b68683c99
 ssh -NL 1234:localhost:1234 username@172.26.36.128
+
+
+jupyter notebook --no-browser --port 1234
+ssh -NL 1235:localhost:1235 zww@10.18.96.201
