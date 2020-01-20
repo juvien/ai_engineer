@@ -5,3 +5,21 @@ ssh -NL 1234:localhost:1234 username@172.26.36.128
 
 jupyter notebook --no-browser --port 1234
 ssh -NL 1235:localhost:1235 zww@10.18.96.201
+
+
+另外一种：
+jupyter notebook --generate-config
+
+python
+from notebook.auth import passwd
+passwd()
+
+vim ~/.jupyter/jupyter_notebook_config.py
+
+c.NotebookApp.ip='0.0.0.0'
+c.NotebookApp.password = u'把上面的文本粘贴到这里'
+c.NotebookApp.open_browser = False
+c.NotebookApp.port =2323
+
+
+jupyter notebook
